@@ -2,6 +2,8 @@
 
 const Todo = require('../models/Todo');
 
+// get all todo Data 
+
 exports.getTodo = async (req, res) => {
     try {
 

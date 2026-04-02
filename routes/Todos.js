@@ -6,7 +6,8 @@ const Router = express.Router();
 const { createTodo } = require('../controllers/createTodo');
 const { getTodo } = require('../controllers/getTodo');
 const { getTodoById } = require('../controllers/getoneTodo');
-const { UpdateTodo } = require('../controllers/UpdateTodo')
+const { UpdateTodo } = require('../controllers/UpdateTodo');
+const { deleteTodo } = require('../controllers/DeleteTodo');
 // define API
 // create Route so use post req 
 // build mapping  between route and controllers
@@ -19,6 +20,8 @@ Router.get('/getTodo/:id', getTodoById);
 Router.post('/createTodo', createTodo);
 // put --update
 Router.put('/updateTodo/:id', UpdateTodo)
+// delete  Route
+Router.delete('/deleteTodo/:id', deleteTodo)
 
 
 
